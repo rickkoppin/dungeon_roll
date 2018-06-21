@@ -1,3 +1,5 @@
+# These functions have been tested and are working properly
+
 def roll_dungeon_dice(dice_dragons_den, the_dungeon_level):
     '''
     dice_dragons_den: integer, number of dragon dice in dragons den
