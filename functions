@@ -1,0 +1,29 @@
+def roll_dungeon_dice(dice_dragons_den, the_dungeon_level):
+    '''
+    dice_dragons_den: integer, number of dragon dice in dragons den
+    the_dungeon_level: integer, dungeon level (1-10)
+    returns: list, dungeon dice
+    '''
+    monster = []
+    dice_available = 7 - dice_dragons_den
+    if the_dungeon_level > dice_available:
+        dice_to_roll = dice_available
+    else:
+        dice_to_roll = the_dungeon_level
+    for i in range(dice_to_roll):
+        random_roll = random.randint(0,5)
+        DUNGEON_NAMES = ("Dragon", "Potion", "Chest", "Skeleton", "Ooze", "Goblin")
+        monster.append(DUNGEON_NAMES[random_roll])
+    return monster
+
+def roll_party():
+    '''
+    Party dice options: Fighter, Cleric, Mage, Thief, Champion, Scroll
+    returns: list, party dice   
+    '''
+    party = []
+    for i in range(7):
+        random_roll = random.randint(0,5)
+        PARTY_NAMES = ("Fighter", "Cleric", "Mage", "Thief", "Champion", "Scroll")
+        party.append(PARTY_NAMES[random_roll])
+    return party
